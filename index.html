@@ -332,7 +332,7 @@
   <div class="container">
 
     <div class="toggle-wrap">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <button class="theme-toggle" id="theme-btn" aria-label="Toggle theme">
         <span class="toggle-icon" id="toggle-icon">☀️</span>
         <span id="toggle-label">Light</span>
       </button>
@@ -463,6 +463,6 @@
       localStorage.setItem('theme', isDark ? 'light' : 'dark');
     }
 
-    const saved = localStorage.getItem('theme');
+    document.getElementById('theme-btn').addEventListener('click', toggleTheme);
     if (saved) {
       document.documentEle
