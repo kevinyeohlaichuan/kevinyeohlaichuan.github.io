@@ -86,6 +86,7 @@
     section:nth-child(3) { animation-delay: 0.19s; }
     section:nth-child(4) { animation-delay: 0.26s; }
     section:nth-child(5) { animation-delay: 0.33s; }
+    section:nth-child(6) { animation-delay: 0.40s; }
 
     .toggle-wrap {
       display: flex;
@@ -216,6 +217,25 @@
       margin-bottom: 0.9rem;
     }
 
+    .game-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--ink-dim);
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+    }
+
     .game-link {
       display: inline-block;
       font-size: 12px;
@@ -228,6 +248,10 @@
 
     .game-link:hover { color: var(--ink); }
     .game-link::after { content: ' →'; }
+
+    .game-link + .game-link {
+      margin-left: 1.2rem;
+    }
 
     .wip-badge {
       display: inline-block;
@@ -402,6 +426,33 @@
     </section>
 
     <section>
+      <div class="section-label">Technical Work</div>
+
+      <div class="game">
+        <div class="game-header">
+          <div class="game-title">Property Presentation Mini App</div>
+          <div class="game-platform">UE5 · Blueprint</div>
+        </div>
+        <p class="game-desc">
+          An interactive real estate sales kiosk built in Unreal Engine 5 (Blueprint only).
+          Features a custom orbit camera pawn, floor visibility slider, double-click unit
+          selection with dynamic material highlights, DataTable-driven unit info panel,
+          and a dual-tower selector with Tower A / Tower B / All states.
+          Built as a technical assessment — delivered in 5 days.
+        </p>
+        <div class="game-tags">
+          <span class="tag">Unreal Engine 5</span>
+          <span class="tag">Blueprint</span>
+          <span class="tag">UMG</span>
+          <span class="tag">DataTable</span>
+          <span class="tag">Enhanced Input</span>
+          <span class="tag">Dynamic Materials</span>
+        </div>
+        <a class="game-link" href="https://drive.google.com/file/d/1Ie621CCzlkixA5vPkxCq8uZdbP6WoVFj/view?usp=sharing" target="_blank" rel="noopener">Watch Demo</a>
+      </div>
+    </section>
+
+    <section>
       <div class="section-label">About</div>
       <div class="about-text">
         <p>
@@ -463,3 +514,5 @@
       document.getElementById('toggle-label').textContent = isDark ? 'Dark' : 'Light';
     }
   </script>
+</body>
+</html>
